@@ -1,10 +1,10 @@
-# goEmail [![GoDoc](https://pkg.go.dev/badge/goEmail.svg)](https://pkg.go.dev/goEmail)
+# goEmail [![GoDoc](https://pkg.go.dev/badge/goEmail.svg)](https://pkg.go.dev/github.com/richi0/goEmail)
 
-goEmail sends email using different email providers
+goEmail sends emails using different email providers
 
 ## What does goEmail do?
 
-goEmail sends email using different email providers. At the moment two providers are supportet.
+goEmail sends emails using different email providers. At the moment two providers are supportet.
 
 - Mailjet: For production use
 - Terminal: For development (logs to the terminal)
@@ -23,7 +23,7 @@ go get -u github.com/richi0/goEmail
 // Use different sender depending on your stage
 var emailSender goEmail.EmailSender
 if stage == "production" {
-	emailSender = goEmail.NewMailjetSender(config.MJApiKeyPublic, config.MJApiKeyPrivate)
+	emailSender = goEmail.NewMailjetSender("<public_key>", "<private_key>")
 } else {
 	emailSender = goEmail.NewTerminalSender()
 }
