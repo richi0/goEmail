@@ -1,3 +1,5 @@
+// Package goEmail provides methods to send emails using different email services.
+// The two implementations of the EmailSender interface are TerminalSender and MailjetSender.
 package goEmail
 
 import (
